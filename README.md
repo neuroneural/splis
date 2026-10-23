@@ -1,0 +1,15 @@
+# Sergey M. Plis
+
+A small, buildless personal page at <https://neuroneural.net/splis/>.
+
+## Edit and preview
+
+Edit `index.html` for the biography and profile links, or `styles.css` for the layout. The portrait is in `assets/sergey-plis.jpg`.
+
+Run `python3 -m http.server 8000` from this directory, then open <http://localhost:8000>.
+
+## Publish
+
+GitHub Pages serves the root of the `main` branch. Commit and push changes to publish them. `.nojekyll` keeps the site fully static; no dependencies or build step are required.
+
+The custom domain is inherited from the organization's `neuroneural.github.io` Pages site. Do not add a `CNAME` file here: this project belongs at `/splis/` on that domain.

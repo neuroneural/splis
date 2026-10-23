@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light;
+  --paper: #ffffff;
+  --ink: #162e43;
+  --muted: #526574;
+  --blue: #235b8e;
+  --focus: #e5eff8;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding: clamp(32px, 8vw, 96px) 28px;
+}
+
+.profile {
+  width: min(100%, 930px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(40px, 6vw, 76px);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1 {
+  margin: -10px 0 22px;
+  font-size: clamp(36px, 4.5vw, 52px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+}
+
+.affiliation {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+  border-radius: 2px;
+  background: var(--focus);
+}
+
+.about {
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about p { margin: 0 0 16px; }
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  margin-top: 28px;
+}
+
+.profiles a {
+  display: block;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.account {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@media (max-width: 700px) {
+  body { padding: 40px 26px; }
+  .profile { max-width: 480px; grid-template-columns: 1fr; gap: 32px; }
+  .portrait { width: 170px; }
+  h1 { margin-top: 0; font-size: 40px; }
+  .about { margin-top: 26px; }
+  .profiles { column-gap: 24px; }
+}
+
+@media (max-width: 360px) {
+  body { padding-inline: 22px; }
+  h1 { font-size: 36px; }
+}
